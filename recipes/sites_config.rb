@@ -40,7 +40,7 @@ EOH
           mode 0644
           variables({
             :run_code => store['run_code'],
-            :servername => site['servername']
+            :base_url => store['base_url']
           })
         end
         bash "magento-stores-config" do
