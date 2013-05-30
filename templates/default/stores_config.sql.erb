@@ -1,9 +1,9 @@
 INSERT IGNORE INTO core_config_data
   (scope, scope_id, path, value)
-  SELECT 'stores', store_id, 'web/unsecure/base_url', 'http://<%= @servername %>/'
+  SELECT 'stores', store_id, 'web/unsecure/base_url', 'http://<%= @base_url %>/'
     FROM core_store WHERE code = '<%= @run_code %>';
 
 INSERT IGNORE INTO core_config_data
   (scope, scope_id, path, value)
-  SELECT 'stores', store_id, 'web/secure/base_url', 'https://<%= @servername %>/'
+  SELECT 'stores', store_id, 'web/secure/base_url', 'https://<%= @base_url %>/'
     FROM core_store WHERE code = '<%= @run_code %>';
